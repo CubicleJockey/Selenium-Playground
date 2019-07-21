@@ -51,5 +51,19 @@ namespace SeleniumPlayground
             
             Console.WriteLine(content);
         }
+
+        [TestMethod]
+        public void SetGoogleQueryText()
+        {
+            driver.Url = GOOGLE_URL;
+
+            var input = driver.FindElement(By.XPath("//input[@class='gLFyf gsfi']"));
+            input.SendKeys("raspberry pi");
+
+            var searchButton = driver.FindElement(By.Name("btnK"));
+            searchButton.Click();
+
+            driver.Title.Should().Be("raspberry pi - Google Search");
+        }
     }
 }
