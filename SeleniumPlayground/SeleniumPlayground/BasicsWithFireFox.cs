@@ -8,7 +8,7 @@ using System.IO;
 namespace SeleniumPlayground
 {
     [TestClass]
-    public class BasicWithFireFox
+    public class BasicsWithFireFox
     {
         private const string GOOGLE_URL = "http://google.com/ncr";
         private IWebDriver driver;
